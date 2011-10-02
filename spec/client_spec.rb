@@ -30,4 +30,9 @@ describe PapertimeClient do
     )["publications"][0]["publication"]["title"].should eq "BERGENSAVISEN"
   end
 
+  it "returns valid kml" do
+    @client.coverage_areas_kml[0..3].should eq "<kml"
+    @client.coverage_areas_kml.length.should > 10000
+  end
+
 end

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'papertime_client'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2011-10-01'
   s.summary     = "For talking to Papertime server"
   s.description = "Papertime is a server giving details about Norwegian newspapers. This is a client for connecting to that server."

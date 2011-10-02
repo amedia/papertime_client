@@ -82,6 +82,12 @@ class PapertimeClient
     uri.query = "lat=#{lat}&lon=#{lon}"
     content_from(uri)
   end
+
+  def coverage_areas_kml
+    uri = @base_uri + 'coverage_areas_kml'
+    client = HTTPClient.new.get(uri)
+    client.body
+  end
   
   private
   
