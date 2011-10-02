@@ -19,8 +19,9 @@ describe PapertimeClient do
       :production_days => 4).class.should eq Date
   end
 
-  it "finds publication for 'www.amta.no'" do
+  it "finds publication for 'www.amta.no' and 'amta.no'" do
     @client.find_publication_by_domain('www.amta.no')["publication"]["title"].should eq "AKERSHUS AMSTIDENDE"
+    @client.find_publication_by_domain('amta.no')["publication"]["title"].should eq "AKERSHUS AMSTIDENDE"    
   end
 
   it "finds publication for Fjellgaten 3, Bergen" do

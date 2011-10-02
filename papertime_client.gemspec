@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version     = '0.0.1'
   s.date        = '2011-10-01'
   s.summary     = "For talking to Papertime server"
-  s.description = "Papertime is a server giving details about Norwegian newspapers. This is a client for talking to that server inside other applications."
+  s.description = "Papertime is a server giving details about Norwegian newspapers. This is a client for connecting to that server."
   s.authors     = ["Origogruppen AS"]
   s.email       = 'post@origo.no'
   s.files       = ["lib/papertime_client.rb"]
