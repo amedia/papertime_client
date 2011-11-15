@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'papertime_client'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2011-10-01'
   s.summary     = "For talking to Papertime server"
   s.description = "Papertime is a server giving details about Norwegian newspapers. This is a client for connecting to that server."
@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email       = 'post@origo.no'
   s.files       = ["lib/papertime_client.rb"]
   s.homepage    =
-    'http://rubygems.org/gems/papertime_client'
+    'https://github.com/origo/papertime_client'
 
   s.add_runtime_dependency 'httpclient'
   s.add_runtime_dependency 'json'
