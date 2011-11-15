@@ -25,14 +25,16 @@ describe PapertimeClient do
   end
 
   it "finds publication for Fjellgaten 3, Bergen" do
-    @client.find_publications_by_lat_lon(
-      60.39722717832889, 5.329188849684669
-    )["publications"][0]["publication"]["title"].should eq "BERGENSAVISEN"
+    publications = @client.find_publications_by_lat_lon(
+          60.39722717832889, 5.329188849684669
+        )
+    publications["publications"][0]["publication"]["title"].should eq "BERGENSAVISEN"
+    publications["publications"][0]["publication"]["coverage_area"]["type"].should eq "MultiPolygon"
   end
 
-  it "returns valid kml" do
-    @client.coverage_areas_kml[0..3].should eq "<kml"
-    @client.coverage_areas_kml.length.should > 10000
+  it "returns all coverage areas" do
+    @client.coverage_areas["publications"].length.should > 10
+    @client.coverage_areas["publications"][9]["publication"]["coverage_area"]["type"].should eq "MultiPolygon"
   end
 
 end

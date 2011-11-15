@@ -83,10 +83,9 @@ class PapertimeClient
     content_from(uri)
   end
 
-  def coverage_areas_kml
-    uri = @base_uri + 'coverage_areas_kml'
-    client = HTTPClient.new.get(uri)
-    client.body
+  def coverage_areas
+    uri = @base_uri + 'coverage_areas.json'
+    content_from(uri)
   end
   
   private
